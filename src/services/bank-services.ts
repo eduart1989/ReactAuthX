@@ -134,7 +134,7 @@ export async function uploadBanksData(data: any[]): Promise<any> {
 
     const API_URL = `${BASE_URL}banks/create-multiple`
     try {
-        const response = await axios.post(API_URL, [transformedData[0]], { headers: authHeader() });
+        const response = await axios.post(API_URL, transformedData, { headers: authHeader() });
         return response.data;
     } catch (error: any) {
 
